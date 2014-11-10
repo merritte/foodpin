@@ -220,6 +220,52 @@ class ResturantTableViewController: UITableViewController {
             
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+        
+        
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath:
+        NSIndexPath) -> [AnyObject] {
+        var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title:
+        "Share", handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+        
+        let shareMenu = UIAlertController(title: nil, message: "Share using",
+        preferredStyle: .ActionSheet)
+        let twitterAction = UIAlertAction(title: "Twitter", style:
+        UIAlertActionStyle.Default, handler: nil)
+        let facebookAction = UIAlertAction(title: "Facebook", style:
+        UIAlertActionStyle.Default, handler: nil)
+        let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default,
+        handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel,
+        handler: nil)
+        shareMenu.addAction(twitterAction)
+        shareMenu.addAction(facebookAction)
+        shareMenu.addAction(emailAction)
+        shareMenu.addAction(cancelAction)
+        self.presentViewController(shareMenu, animated: true, completion: nil)
+        }
+        )
+        var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default,
+        title: "Delete",handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
+        // Delete the row from the data source
+        self.restaurantNames.removeAtIndex(indexPath.row)
+        self.restaurantLocations.removeAtIndex(indexPath.row)
+        self.restaurantTypes.removeAtIndex(indexPath.row)
+        self.restaurantIsVisited.removeAtIndex(indexPath.row)
+        self.restaurantImages.removeAtIndex(indexPath.row)
+        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        )
+        
+        shareAction.backgroundColor = UIColor(red: 102.0/255.0, green: 204.0/255.0, blue:
+            163.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue:
+            43.0/255.0, alpha: 1.0)
+        
+        return [deleteAction, shareAction]
+        
+        
     }
     
     
