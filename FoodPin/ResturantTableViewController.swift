@@ -91,12 +91,17 @@ class ResturantTableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // In a storyboard-based application, you will often want to do a little preparation before navigation */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                    let destinationController = segue.destinationViewController as DetailViewController
+                    destinationController.restaurantImage = self.restaurantImages[indexPath.row]
+                    }
+            
+                }
+            }
+
 
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "Thai Cafe"]
     
@@ -141,7 +146,8 @@ class ResturantTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:
+    // POP UP TABLE
+    /* override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:
         NSIndexPath) {
             if restaurantIsVisited[indexPath.row] {
                 
@@ -266,7 +272,7 @@ class ResturantTableViewController: UITableViewController {
         return [deleteAction, shareAction]
         
         
-    }
+    } */ //END POP UP THING
     
     
     

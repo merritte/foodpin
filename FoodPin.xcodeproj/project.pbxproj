@@ -14,6 +14,7 @@
 		DE9569741A072E6D00F20E69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9569721A072E6D00F20E69 /* LaunchScreen.xib */; };
 		DE9569801A072E6D00F20E69 /* FoodPinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95697F1A072E6D00F20E69 /* FoodPinTests.swift */; };
 		DE95698A1A07308700F20E69 /* ResturantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9569891A07308700F20E69 /* ResturantTableViewController.swift */; };
+		DEB046E91A11B6A800E412B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB046E81A11B6A800E412B1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DE95697E1A072E6D00F20E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE95697F1A072E6D00F20E69 /* FoodPinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinTests.swift; sourceTree = "<group>"; };
 		DE9569891A07308700F20E69 /* ResturantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantTableViewController.swift; sourceTree = "<group>"; };
+		DEB046E81A11B6A800E412B1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				DE9569891A07308700F20E69 /* ResturantTableViewController.swift */,
 				DE9569671A072E6D00F20E69 /* Supporting Files */,
 				DE692F9A1A088108005BF8BB /* CustomTableViewCell.swift */,
+				DEB046E81A11B6A800E412B1 /* DetailViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				DE692F9B1A088108005BF8BB /* CustomTableViewCell.swift in Sources */,
 				DE95698A1A07308700F20E69 /* ResturantTableViewController.swift in Sources */,
 				DE95696A1A072E6D00F20E69 /* AppDelegate.swift in Sources */,
+				DEB046E91A11B6A800E412B1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
